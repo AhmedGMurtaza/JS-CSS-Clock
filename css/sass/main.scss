@@ -1,0 +1,56 @@
+$blue: #035db9;
+$white: #ffffff;
+$danger: #e44663;
+$black: #000000;
+$warning: #e4980e;
+body {
+    margin: 0;
+    background: $danger;
+    text-align: center;
+    color: $white;
+}
+
+.wrapper {
+    display: flex;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.clock {
+    height: 270px;
+    width: 270px;
+    background: darken($white, 3%);
+    border: 10px solid $blue;
+    border-radius: 50%;
+    box-shadow: 2px 2px 10px #272727;
+    position: relative;
+    &__sec-tick {
+        height: 2px;
+        width: 50%;
+        position: absolute;
+        top: 50%;
+        background: $warning;
+        transform-origin: 100%;
+    }
+    &__min-tick {
+        height: 4px;
+        width: 50%;
+        position: absolute;
+        top: 48%;
+        background: $danger;
+        transform-origin: 100%;
+    }
+    &__hour-tick {
+        height: 8px;
+        width: 35%;
+        position: absolute;
+        top: 48%;
+        left: 15%;
+        background: $black;
+        transform-origin: 100%;
+    }
+}
